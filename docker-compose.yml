@@ -1,5 +1,6 @@
 version: "3.9"
 services:
+  # apiのコンテナ
   api:
     container_name: api
     build: ./api
@@ -9,6 +10,7 @@ services:
     volumes:
       - ./api:/workspace:cached
 
+  # webのコンテナ
   web:
     container_name: web
     build: ./web
