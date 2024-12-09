@@ -52,7 +52,7 @@ jobs:
         run:
           # pushの際に、image名をリポジトリ名にする必要あり
           docker image tag temp_web_image_name:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
-          docker push $ECR_REGISTORY/$ECR_REPOSITORY:latest
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
   # API container Build/Test
   ## Get Source
@@ -92,7 +92,7 @@ jobs:
         run:
           # pushの際に、image名をリポジトリ名にする必要あり
           docker image tag temp_web_image_name:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
-          docker push $ECR_REGISTORY/$ECR_REPOSITORY:latest
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
   # Deploy
   deploy:
