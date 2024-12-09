@@ -51,7 +51,7 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.AWS_ECR_WEB_SERVER_REPOSITORY }}
         run:
           # pushの際に、image名をリポジトリ名にする必要あり
-          docker image tag temp_web_image_name:latest $ECR_REGISTORY/$ECR_REPOSITORY:latest
+          docker image tag temp_web_image_name:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTORY/$ECR_REPOSITORY:latest
 
   # API container Build/Test
@@ -91,7 +91,7 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.AWS_ECR_API_SERVER_REPOSITORY }}
         run:
           # pushの際に、image名をリポジトリ名にする必要あり
-          docker image tag temp_web_image_name:latest $ECR_REGISTORY/$ECR_REPOSITORY:latest
+          docker image tag temp_web_image_name:latest $ECR_REGISTRY/$ECR_REPOSITORY:latest
           docker push $ECR_REGISTORY/$ECR_REPOSITORY:latest
 
   # Deploy
